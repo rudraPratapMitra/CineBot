@@ -1,5 +1,6 @@
+import logoImage from '../assets/cinebot.png';
 export const getAvatarUrl = (name) =>`https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=FF0000&color=fff&bold=true`;
-export const LOGO="https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production_2025-07-24/consent/87b6a5c0-0104-4e96-a291-092c11350111/019808e2-d1e7-7c0f-ad43-c485b7d9a221/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
+export const LOGO=logoImage
 export const API_OPTIONS = {
   method: 'GET',
   headers: {
@@ -8,7 +9,7 @@ export const API_OPTIONS = {
   },
 };
 export const IMAGE_URL="https://image.tmdb.org/t/p/w500/" 
-export const NETFLIX_COVER="https://assets.nflxext.com/ffe/siteui/vlv3/258d0f77-2241-4282-b613-8354a7675d1a/web/IN-en-20250721-TRIFECTA-perspective_cadc8408-df6e-4313-a05d-daa9dcac139f_large.jpg"
+export const NETFLIX_COVER="https://payload.cargocollective.com/1/11/367710/13568488/CINEMA-CLASSICS-POSTER_RUTGERS_3600.jpg"
 
 export const SUPPORTED_LANGUAGES = [
   { value: "en", name: "English", placeholder: "What would you like to watch today?", btn_txt: "Search" },

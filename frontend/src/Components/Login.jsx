@@ -93,7 +93,7 @@ function Login(){
                     <div>
                        {isSignInForm? 
                        <div>  
-                            <span className="font-monospace">New to Netflix? </span> 
+                            <span className="font-monospace">New to CineBot? </span> 
                             <span 
                                 className="cursor-pointer font-bold underline"
                                 onClick={()=>setSignInForm(!isSignInForm)}>Sign up Now.
