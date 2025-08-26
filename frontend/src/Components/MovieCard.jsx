@@ -1,24 +1,6 @@
-// import { IMAGE_URL } from "../Utils/constants";
-
-// const MovieCard = ({ posterPath }) => {
-//   if (!posterPath) return null;
-
-//   return (
-//     <div className="min-w-[140px] h-[160px] rounded-lg overflow-hidden shadow-md">
-//       <img
-//         className="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
-//         src={IMAGE_URL + posterPath}
-//         alt="movie poster"
-//       />
-//     </div>
-//   );
-// };
-
-// export default MovieCard;
-
 import { IMAGE_URL } from "../Utils/constants";
 
-const MovieCard = ({ posterPath, title, description, rating, year }) => {
+const MovieCard = ({ posterPath, title, description, rating }) => {
   if (!posterPath) return null;
 
   return (
@@ -36,7 +18,6 @@ const MovieCard = ({ posterPath, title, description, rating, year }) => {
         <p className="text-xs text-gray-300 mt-1 line-clamp-3">{description}</p>
         <div className="mt-2 text-xs flex justify-between text-gray-200">
           <span>☆ {rating || "N/A"}</span>
-          <span>{year || "Unknown"}</span>
         </div>
       </div>
     </div>
