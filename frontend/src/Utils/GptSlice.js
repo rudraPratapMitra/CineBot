@@ -4,7 +4,8 @@ const GptSlice= createSlice({
     name:"gpt",
     initialState:{
         showGptView:false,
-        gptMovies:null
+        gptMovies:null,
+        isLoading:false
     },
     reducers:{
         toggleGptSearchView:(state,action)=>{
@@ -13,9 +14,13 @@ const GptSlice= createSlice({
         },
         addGptMovieResult:(state,action)=>{
             state.gptMovies=action.payload;
+            state.isLoading = false; 
+        },
+        setLoadingState:(state,action)=>{
+            state.isLoading=action.payload;
         }
     }
 })
 
 export default GptSlice.reducer;
-export const {toggleGptSearchView,addGptMovieResult}=GptSlice.actions;
+export const {toggleGptSearchView,addGptMovieResult,setLoadingState}=GptSlice.actions;

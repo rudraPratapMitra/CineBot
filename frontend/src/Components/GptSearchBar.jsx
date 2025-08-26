@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { API_OPTIONS, SUPPORTED_LANGUAGES } from "../Utils/constants";
 import { useRef } from "react";
 import { getGeminiResponse } from "../Utils/genAI";
-import { addGptMovieResult } from "../Utils/GptSlice";
+import { addGptMovieResult,setLoadingState } from "../Utils/GptSlice";
 
 const GptSearchBar=()=>{
     const language=useSelector((store)=>store.language.language)
@@ -19,7 +19,8 @@ const GptSearchBar=()=>{
         const query = searchText.current.value;
         if (!query.trim()) return;
         try {
-        const response = await getGeminiResponse(query); // call Gemini
+        dispatch(setLoadingState(true));
+        const response = await getGeminiResponse(query); 
         const recommendedMovies=response.split(",")
         const recommendedMoviesPromises=recommendedMovies.map((movie)=>TMDBsearch(movie));
         const tmdbResults=await Promise.all(recommendedMoviesPromises)
