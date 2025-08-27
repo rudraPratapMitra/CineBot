@@ -41,10 +41,10 @@ function Header() {
     
 
   return (
-    <div className="absolute px-12 py-6 z-50 w-full flex flex-col md:flex-row  justify-between items-center">
+    <div className="absolute px-12 py-6 z-50 w-full flex flex-row justify-between items-center">
       {/* Netflix Logo */}
       <img
-        className="w-48 drop-shadow-lg"
+        className="w-24 sm:w-36 md:w-48 drop-shadow-lg"
         src={LOGO}
         alt="netflix-logo"
       />
@@ -64,17 +64,18 @@ function Header() {
                 )
               })}
             </select>}
-            <button 
-              className=" bg-violet-700 border cursor-pointer shadow-sm hover:scale-105 border-white text-white py-2 px-2 rounded-lg"
-              onClick={()=>{
+            <button
+              className="bg-violet-700 border cursor-pointer shadow-sm hover:scale-105 border-white text-white py-1 px-2 text-sm sm:py-2 sm:px-4 sm:text-base rounded-lg"
+              onClick={() => {
                 dispatch(toggleGptSearchView());
-              }}>
-             {showGptView?"Home":"AskGpt" }
+              }}
+            >
+              {showGptView ? "Home" : "AskGpt"}
             </button>
             <img
               src={userObject.photoURL}
               alt="user-avatar"
-              className="w-10 h-10 rounded-b-sm border-2 border-white shadow-sm hover:scale-105  cursor-pointer"
+              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-b-sm border-2 border-white shadow-sm hover:scale-105 cursor-pointer"
               onClick={()=>{
                   setDropdown(!isDropdownOpen)
               }}
@@ -105,6 +106,3 @@ function Header() {
 }
 
 export default Header;
-
-
-
