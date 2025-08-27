@@ -7,7 +7,7 @@ const MovieCard = ({ posterPath, title, description, rating, year }) => {
   if (!posterPath) return null;
 
   return (
-    <>
+    <> 
       {/* Movie Poster */}
       <div
         className="min-w-[140px] h-[200px] rounded-lg overflow-hidden shadow-md cursor-pointer"
