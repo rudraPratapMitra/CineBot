@@ -41,7 +41,7 @@ function Header() {
     
 
   return (
-    <div className="absolute px-12 py-6 z-50 w-full flex justify-between items-center">
+    <div className="absolute px-12 py-6 z-50 w-full flex flex-col md:flex-row  justify-between items-center">
       {/* Netflix Logo */}
       <img
         className="w-48 drop-shadow-lg"
@@ -105,3 +105,6 @@ function Header() {
 }
 
 export default Header;
+
+
+
